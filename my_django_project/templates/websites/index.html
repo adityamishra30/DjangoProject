@@ -1,0 +1,271 @@
+{% extends 'websites/base.html' %} {% load static %} {% block title %}Home |
+Antigravity Tech{% endblock %} {% block content %}
+<!-- Hero Section -->
+<section class="hero-section" id="home-hero">
+  <div class="hero-bg-glow"></div>
+  <div class="container hero-container">
+    <div class="hero-badge animate-fade-in" id="hero-badge-item">
+      <span class="badge-icon"><i class="fa-solid fa-sparkles"></i></span>
+      <span class="badge-text">Next-Gen Digital Solutions</span>
+    </div>
+    <h1 class="hero-title animate-fade-in" id="hero-title-main">
+      Elevate Your Digital <br /><span class="gradient-text">Presence</span>
+    </h1>
+    <p class="hero-subtitle animate-fade-in" id="hero-subtitle-desc">
+      We build high-performance web applications combining cutting-edge
+      technology, striking aesthetics, and seamless user experiences.
+    </p>
+    <div class="hero-actions animate-fade-in" id="hero-action-buttons">
+      <a
+        href="{% url 'contact' %}"
+        class="btn btn-primary"
+        id="hero-cta-primary"
+      >
+        Get Started <i class="fa-solid fa-arrow-right"></i>
+      </a>
+      <a
+        href="{% url 'about' %}"
+        class="btn btn-secondary"
+        id="hero-cta-secondary"
+      >
+        Learn More
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Grid (Interactive Counter Numbers) -->
+<section class="stats-section" id="home-stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card" id="stat-projects">
+        <h3 class="stat-number" data-target="150" data-suffix="+">0+</h3>
+        <p class="stat-label">Projects Completed</p>
+      </div>
+      <div class="stat-card" id="stat-clients">
+        <h3 class="stat-number" data-target="98" data-suffix="%">0%</h3>
+        <p class="stat-label">Client Satisfaction</p>
+      </div>
+      <div class="stat-card" id="stat-experience">
+        <h3 class="stat-number" data-target="8" data-suffix=" Yrs">0 Yrs</h3>
+        <p class="stat-label">Industry Leadership</p>
+      </div>
+      <div class="stat-card" id="stat-members">
+        <h3 class="stat-number" data-target="24" data-suffix="/7">0/7</h3>
+        <p class="stat-label">Global Tech Support</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Grid Section -->
+<section class="features-section" id="home-features">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Core Offerings</span>
+      <h2 class="section-title">Engineered for Excellence</h2>
+      <p class="section-subtitle">
+        Discover how our approach sets new standards in modern web application
+        development.
+      </p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card" id="feature-design">
+        <div class="feature-icon icon-blue">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </div>
+        <h3 class="feature-title">Premium Design</h3>
+        <p class="feature-desc">
+          Vibrant custom styling systems, glassmorphism, responsive grids, and
+          micro-animations designed to wow visitors.
+        </p>
+      </div>
+
+      <div class="feature-card" id="feature-backend">
+        <div class="feature-icon icon-purple">
+          <i class="fa-solid fa-cubes"></i>
+        </div>
+        <h3 class="feature-title">Django Architecture</h3>
+        <p class="feature-desc">
+          Secure, fast, and structured Python backends utilizing clean MVC
+          models, routing configurations, and databases.
+        </p>
+      </div>
+
+      <div class="feature-card" id="feature-performance">
+        <div class="feature-icon icon-amber">
+          <i class="fa-solid fa-gauge-high"></i>
+        </div>
+        <h3 class="feature-title">Optimized Speed</h3>
+        <p class="feature-desc">
+          Blazing-fast load times through optimized asset structures, clean DOM
+          trees, and clean semantic code layouts.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Interactive Testimonial Slider Section -->
+<section class="testimonials-section" id="home-testimonials">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Testimonials</span>
+      <h2 class="section-title">What Our Clients Say</h2>
+    </div>
+
+    <div class="testimonials-slider-container">
+      <div class="testimonials-slider">
+        <!-- Slide 1 -->
+        <div class="testimonial-slide active" id="slide-1">
+          <div class="testimonial-quote">
+            <i class="fa-solid fa-quote-left"></i>
+          </div>
+          <p class="testimonial-text">
+            "Antigravity did an absolute wonder with our product interface. The
+            dark mode theme is clean, layouts are incredibly fast, and their
+            attention to tiny micro-interactions is outstanding."
+          </p>
+          <div class="testimonial-author">
+            <h4>Sarah Jenkins</h4>
+            <p>CEO, Vertex Digital</p>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="testimonial-slide" id="slide-2">
+          <div class="testimonial-quote">
+            <i class="fa-solid fa-quote-left"></i>
+          </div>
+          <p class="testimonial-text">
+            "The Django framework implementation is flawless, and the template
+            structure makes updating our services simple. High quality code that
+            runs extremely fast."
+          </p>
+          <div class="testimonial-author">
+            <h4>Marcus Thorne</h4>
+            <p>CTO, CloudScale Labs</p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="testimonial-slide" id="slide-3">
+          <div class="testimonial-quote">
+            <i class="fa-solid fa-quote-left"></i>
+          </div>
+          <p class="testimonial-text">
+            "Outstanding design system execution. The team's courage to reject
+            generic structures and bring curated aesthetics completely aligned
+            with our high-end brand."
+          </p>
+          <div class="testimonial-author">
+            <h4>Elena Rostova</h4>
+            <p>VP of Product, Apex Tech</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-controls">
+        <button
+          class="control-btn"
+          id="slider-prev"
+          aria-label="Previous Slide"
+        >
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="dot-indicators">
+          <span class="dot-indicator active"></span>
+          <span class="dot-indicator"></span>
+          <span class="dot-indicator"></span>
+        </div>
+        <button class="control-btn" id="slider-next" aria-label="Next Slide">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Interactive FAQ Accordion Section -->
+<section class="faq-section" id="home-faqs">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">FAQ</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="faq-accordion-list">
+      <div class="faq-item" id="faq-q1">
+        <button class="faq-question">
+          <span>What technologies do you use for backend projects?</span>
+          <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            We primarily build our backends with Python frameworks like Django
+            or FastAPI, providing secure database connections, clean routing
+            directories, and high-performance server handling.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item" id="faq-q2">
+        <button class="faq-question">
+          <span>Can I toggle between light and dark visual themes?</span>
+          <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Yes! Our premium stylesheet includes a global CSS design system
+            mapping color variables so you can toggle theme preferences directly
+            from the sun/moon button in the floating header.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item" id="faq-q3">
+        <button class="faq-question">
+          <span>How do you optimize page loading performance?</span>
+          <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            We achieve fast render rates by utilizing clean semantic HTML5
+            structural syntax, compressed stylesheets, minifying code steps, and
+            writing vanilla non-blocking JavaScript.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Promo Box Section -->
+<section class="promo-section" id="home-promo">
+  <div class="container">
+    <div class="promo-box">
+      <div class="promo-content">
+        <h2 class="promo-title">Ready to launch your vision?</h2>
+        <p class="promo-text">
+          Get in touch with our team today and let's construct a
+          state-of-the-art interface tailored specifically for your brand.
+        </p>
+        <a href="{% url 'contact' %}" class="btn btn-white" id="promo-cta-btn"
+          >Start Project Now</a
+        >
+      </div>
+      <div class="promo-visual">
+        <div class="visual-circle circle-1"></div>
+        <div class="visual-circle circle-2"></div>
+        <div class="visual-card">
+          <div class="card-dots"><span></span><span></span><span></span></div>
+          <div class="card-line short"></div>
+          <div class="card-line"></div>
+          <div class="card-line medium"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Antigravity Tech - Shaping the future of digital experiences with state of the art web technologies and designs.">
+    <title>{% block title %}Antigravity Tech{% endblock %}</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="app-header">
+        <nav class="nav-container" id="main-navigation">
+            <a href="{% url 'home' %}" class="brand-logo" id="logo-link">
+                <span class="logo-icon"><i class="fa-solid fa-feather-pointed"></i></span>
+                <span class="logo-text">Anti<span>gravity</span></span>
+            </a>
+            
+            <ul class="nav-menu" id="nav-links">
+                <li class="nav-item">
+                    <a href="{% url 'home' %}" class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" id="nav-home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'about' %}" class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}" id="nav-about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'contact' %}" class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}" id="nav-contact">Contact Us</a>
+                </li>
+            </ul>
+
+            <div class="nav-cta">
+                <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+                <a href="{% url 'contact' %}" class="btn btn-primary btn-sm" id="nav-cta-btn">Get in Touch</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content" id="main-content-area">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="app-footer" id="app-footer-section">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="{% url 'home' %}" class="brand-logo" id="footer-logo">
+                    <span class="logo-icon"><i class="fa-solid fa-feather-pointed"></i></span>
+                    <span class="logo-text">Anti<span>gravity</span></span>
+                </a>
+                <p class="footer-desc">Crafting premium, high-performance web experiences designed to elevate your digital presence.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" id="social-twitter" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="social-link" id="social-github" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="social-link" id="social-linkedin" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links-group">
+                <h4 class="footer-title">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="{% url 'home' %}" id="footer-link-home">Home</a></li>
+                    <li><a href="{% url 'about' %}" id="footer-link-about">About Us</a></li>
+                    <li><a href="{% url 'contact' %}" id="footer-link-contact">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-group">
+                <h4 class="footer-title">Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="#" id="footer-link-services">Our Services</a></li>
+                    <li><a href="#" id="footer-link-portfolio">Portfolio</a></li>
+                    <li><a href="#" id="footer-link-privacy">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-group">
+                <h4 class="footer-title">Contact</h4>
+                <ul class="footer-links contact-info">
+                    <li><i class="fa-solid fa-location-dot"></i> 100 Innovation Way, Suite 400</li>
+                    <li><i class="fa-solid fa-phone"></i> +1 (555) 019-2831</li>
+                    <li><i class="fa-solid fa-envelope"></i> hello@antigravity.io</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Antigravity. All rights reserved. Created with passion and Django.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Scripts Section -->
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

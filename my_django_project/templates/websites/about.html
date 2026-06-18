@@ -1,0 +1,202 @@
+{% extends 'websites/base.html' %}
+{% load static %}
+
+{% block title %}About Us | Antigravity Tech{% endblock %}
+
+{% block content %}
+<section class="about-hero-section" id="about-hero">
+  <div class="hero-bg-glow"></div>
+  <div class="container">
+    <div class="about-hero-content">
+      <span class="section-tag animate-fade-in">Our Philosophy</span>
+      <h1 class="about-title animate-fade-in" id="about-main-title">
+        Defying Coding <br /><span class="gradient-text">Gravity</span>
+      </h1>
+      <p class="about-subtitle animate-fade-in" id="about-main-desc">
+        We believe that software should not only work flawlessly under the hood,
+        but also feel incredibly premium, fluid, and delightful to interact
+        with.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Interactive Specialization Tabs -->
+<section class="skills-tabs-section" id="about-specializations">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Specializations</span>
+            <h2 class="section-title">Our Workflows & Focus</h2>
+            <p class="section-subtitle">Click through the tabs below to explore the detailed technologies and processes we deploy.</p>
+        </div>
+
+        <div class="tabs-container">
+            <div class="tabs-buttons-bar">
+                <button class="tab-btn active" data-tab="design" id="tab-design-btn">
+                    <i class="fa-solid fa-compass-drafting"></i> Design Phase
+                </button>
+                <button class="tab-btn" data-tab="dev" id="tab-dev-btn">
+                    <i class="fa-solid fa-laptop-code"></i> Development
+                </button>
+                <button class="tab-btn" data-tab="ops" id="tab-ops-btn">
+                    <i class="fa-solid fa-server"></i> Deployment & Ops
+                </button>
+            </div>
+
+            <div class="tabs-content-panels">
+                <!-- Panel 1: Design -->
+                <div class="tab-panel active" id="design-panel">
+                    <div class="panel-grid">
+                        <div class="panel-info">
+                            <h3>Aesthetic Engineering</h3>
+                            <p>We believe first impressions are crucial. During our design cycle, we curate custom color palettes, configure high-contrast layouts, specify responsive grids, and design micro-interactions.</p>
+                            <ul class="panel-list">
+                                <li><i class="fa-solid fa-circle-check"></i> Custom color mapping (HSL Variable Design Systems)</li>
+                                <li><i class="fa-solid fa-circle-check"></i> High-quality font typography scaling</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Interactive hover state triggers & micro-animations</li>
+                            </ul>
+                        </div>
+                        <div class="panel-graphic">
+                            <div class="graphic-box color-pink-glow">
+                                <i class="fa-solid fa-palette"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 2: Dev -->
+                <div class="tab-panel" id="dev-panel">
+                    <div class="panel-grid">
+                        <div class="panel-info">
+                            <h3>Robust Architecture</h3>
+                            <p>Beautiful design means nothing without a fast, secure backend. We craft Python solutions featuring Django's MVC layout, sqlite3 database systems, and dynamic routing directories.</p>
+                            <ul class="panel-list">
+                                <li><i class="fa-solid fa-circle-check"></i> Clean Django MVC structure (Views, URLs, Models)</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Lightweight vanilla JavaScript scripts</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Compliant semantic HTML5 structures</li>
+                            </ul>
+                        </div>
+                        <div class="panel-graphic">
+                            <div class="graphic-box color-purple-glow">
+                                <i class="fa-solid fa-terminal"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 3: Ops -->
+                <div class="tab-panel" id="ops-panel">
+                    <div class="panel-grid">
+                        <div class="panel-info">
+                            <h3>Performance Operations</h3>
+                            <p>We ensure fast load speeds, secure setups, and smooth server reloads. We configure stat reload modules, optimize resource weights, and align security controls.</p>
+                            <ul class="panel-list">
+                                <li><i class="fa-solid fa-circle-check"></i> Blazing-fast page loading speeds</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Secure CSRF protection & routing checks</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Lightweight custom asset organization</li>
+                            </ul>
+                        </div>
+                        <div class="panel-graphic">
+                            <div class="graphic-box color-blue-glow">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Values Section -->
+<section class="values-section" id="about-values">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Core Beliefs</span>
+      <h2 class="section-title">The Principles that Drive Us</h2>
+    </div>
+
+    <div class="values-grid">
+      <div class="value-card" id="value-creative">
+        <div class="value-icon"><i class="fa-solid fa-lightbulb"></i></div>
+        <h3 class="value-card-title">Creative Courage</h3>
+        <p class="value-card-desc">
+          We reject default layouts, generic colors, and boring patterns. We aim
+          to wow the user with high-end typography, dynamic layouts, and bold
+          color systems.
+        </p>
+      </div>
+
+      <div class="value-card" id="value-technical">
+        <div class="value-icon"><i class="fa-solid fa-code"></i></div>
+        <h3 class="value-card-title">Technical Mastery</h3>
+        <p class="value-card-desc">
+          Clean, optimized code is non-negotiable. From structured Django
+          projects to semantic, compliant HTML5 and responsive custom CSS,
+          quality is in our DNA.
+        </p>
+      </div>
+
+      <div class="value-card" id="value-interaction">
+        <div class="value-icon"><i class="fa-solid fa-fingerprint"></i></div>
+        <h3 class="value-card-title">Micro-Interactions</h3>
+        <p class="value-card-desc">
+          An application feels truly alive when elements respond immediately. We
+          focus heavily on hover effects, focus rings, and transitions that
+          enhance the user flow.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Timeline Section -->
+<section class="timeline-section" id="about-timeline">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Our Path</span>
+      <h2 class="section-title">Development Milestones</h2>
+    </div>
+
+    <div class="timeline-wrapper">
+      <div class="timeline-line"></div>
+
+      <div class="timeline-item" id="milestone-1">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-date">Phase 1</span>
+          <h3 class="timeline-title">Foundation</h3>
+          <p class="timeline-desc">
+            Initialized the Django framework, configured environment settings,
+            established app routers, and integrated templates directories.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item" id="milestone-2">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-date">Phase 2</span>
+          <h3 class="timeline-title">Core Architecture</h3>
+          <p class="timeline-desc">
+            Designed unified view controls, corrected core library imports (like
+            resolving os imports), and established base template inheritances.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item" id="milestone-3">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-date">Phase 3</span>
+          <h3 class="timeline-title">Interactive Overhaul</h3>
+          <p class="timeline-desc">
+            Implemented high-end styles, micro-animations, glowing states, and
+            interactive contact forms to complete the design system.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

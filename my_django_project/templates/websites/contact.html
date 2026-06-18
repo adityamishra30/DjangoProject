@@ -1,0 +1,118 @@
+{% extends 'websites/base.html' %}
+{% load static %}
+
+{% block title %}Contact Us | Antigravity Tech{% endblock %}
+
+{% block content %}
+<section class="contact-hero-section" id="contact-hero">
+    <div class="hero-bg-glow"></div>
+    <div class="container">
+        <div class="contact-hero-content">
+            <span class="section-tag animate-fade-in">Connect</span>
+            <h1 class="contact-title animate-fade-in" id="contact-main-title">
+                Start a <span class="gradient-text">Conversation</span>
+            </h1>
+            <p class="contact-subtitle animate-fade-in" id="contact-main-desc">
+                Have a project in mind or want to collaborate? Reach out to us, and let's craft something remarkable.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="contact-section" id="contact-content">
+    <div class="container">
+        <div class="contact-grid">
+            <!-- Contact Information Card -->
+            <div class="contact-info-card" id="contact-details">
+                <h2 class="info-card-title">Contact Information</h2>
+                <p class="info-card-text">Feel free to reach out to us using any of the methods below. Our team is ready to respond within 24 hours.</p>
+                
+                <div class="info-items">
+                    <div class="info-item" id="info-location">
+                        <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="info-body">
+                            <h3>Our Headquarters</h3>
+                            <p>100 Innovation Way, Suite 400<br>San Francisco, CA 94107</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item" id="info-phone">
+                        <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="info-body">
+                            <h3>Phone Number</h3>
+                            <p>+1 (555) 019-2831</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item" id="info-email">
+                        <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="info-body">
+                            <h3>Email Address</h3>
+                            <p>hello@antigravity.io</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-social-block">
+                    <h3>Follow Our Updates</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" id="contact-social-twitter" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="social-icon" id="contact-social-github" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="social-icon" id="contact-social-linkedin" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form Card -->
+            <div class="contact-form-card" id="contact-form-block">
+                <h2 class="form-card-title">Send a Message</h2>
+                <form action="#" method="POST" class="premium-form" id="contact-main-form" onsubmit="event.preventDefault(); alert('Message sent successfully (Mock)!');">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="form-group" id="group-name">
+                            <label for="input-name" class="form-label">Full Name</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon"><i class="fa-solid fa-user"></i></span>
+                                <input type="text" id="input-name" name="name" class="form-control" placeholder="John Doe" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group" id="group-email">
+                            <label for="input-email" class="form-label">Email Address</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon"><i class="fa-solid fa-envelope"></i></span>
+                                <input type="email" id="input-email" name="email" class="form-control" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group" id="group-subject">
+                            <label for="input-subject" class="form-label">Subject</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon"><i class="fa-solid fa-circle-info"></i></span>
+                                <input type="text" id="input-subject" name="subject" class="form-control" placeholder="Project Inquiry" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group" id="group-message">
+                            <label for="input-message" class="form-label">Message</label>
+                            <div class="input-wrapper">
+                                <textarea id="input-message" name="message" class="form-control text-area-control" rows="5" placeholder="Tell us about your project..." required></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                        Send Message <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
