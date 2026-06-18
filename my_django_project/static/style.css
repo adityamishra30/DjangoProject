@@ -279,6 +279,7 @@ body.light-theme .app-header {
 
 .logo-text span {
     background: var(--grad-primary);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -562,6 +563,7 @@ body.light-theme .btn-white:hover {
     font-size: clamp(36px, 5vw, 48px);
     font-weight: 800;
     background: var(--grad-primary);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 8px;
@@ -598,6 +600,7 @@ body.light-theme .btn-white:hover {
     font-weight: 800;
     margin-bottom: 16px;
     background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
