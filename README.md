@@ -96,4 +96,4 @@ Make sure you have Python installed on your machine.
    python manage.py runserver
    ```
 
-6. Open your browser and navigate to **http://127.0.0.1:8000/** to view the site.
+6. Open your browser and navigate to **http://127.0.0.1:8080/** to view the site.
