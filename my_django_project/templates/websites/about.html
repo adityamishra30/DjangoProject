@@ -1,9 +1,5 @@
-{% extends 'websites/base.html' %}
-{% load static %}
-
-{% block title %}About Us | Antigravity Tech{% endblock %}
-
-{% block content %}
+{% extends 'websites/base.html' %} {% load static %} {% block title %}About Us |
+Antigravity Tech{% endblock %} {% block content %}
 <section class="about-hero-section" id="about-hero">
   <div class="hero-bg-glow"></div>
   <div class="container">
@@ -23,89 +19,132 @@
 
 <!-- Interactive Specialization Tabs -->
 <section class="skills-tabs-section" id="about-specializations">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-tag">Specializations</span>
-            <h2 class="section-title">Our Workflows & Focus</h2>
-            <p class="section-subtitle">Click through the tabs below to explore the detailed technologies and processes we deploy.</p>
-        </div>
-
-        <div class="tabs-container">
-            <div class="tabs-buttons-bar">
-                <button class="tab-btn active" data-tab="design" id="tab-design-btn">
-                    <i class="fa-solid fa-compass-drafting"></i> Design Phase
-                </button>
-                <button class="tab-btn" data-tab="dev" id="tab-dev-btn">
-                    <i class="fa-solid fa-laptop-code"></i> Development
-                </button>
-                <button class="tab-btn" data-tab="ops" id="tab-ops-btn">
-                    <i class="fa-solid fa-server"></i> Deployment & Ops
-                </button>
-            </div>
-
-            <div class="tabs-content-panels">
-                <!-- Panel 1: Design -->
-                <div class="tab-panel active" id="design-panel">
-                    <div class="panel-grid">
-                        <div class="panel-info">
-                            <h3>Aesthetic Engineering</h3>
-                            <p>We believe first impressions are crucial. During our design cycle, we curate custom color palettes, configure high-contrast layouts, specify responsive grids, and design micro-interactions.</p>
-                            <ul class="panel-list">
-                                <li><i class="fa-solid fa-circle-check"></i> Custom color mapping (HSL Variable Design Systems)</li>
-                                <li><i class="fa-solid fa-circle-check"></i> High-quality font typography scaling</li>
-                                <li><i class="fa-solid fa-circle-check"></i> Interactive hover state triggers & micro-animations</li>
-                            </ul>
-                        </div>
-                        <div class="panel-graphic">
-                            <div class="graphic-box color-pink-glow">
-                                <i class="fa-solid fa-palette"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Panel 2: Dev -->
-                <div class="tab-panel" id="dev-panel">
-                    <div class="panel-grid">
-                        <div class="panel-info">
-                            <h3>Robust Architecture</h3>
-                            <p>Beautiful design means nothing without a fast, secure backend. We craft Python solutions featuring Django's MVC layout, sqlite3 database systems, and dynamic routing directories.</p>
-                            <ul class="panel-list">
-                                <li><i class="fa-solid fa-circle-check"></i> Clean Django MVC structure (Views, URLs, Models)</li>
-                                <li><i class="fa-solid fa-circle-check"></i> Lightweight vanilla JavaScript scripts</li>
-                                <li><i class="fa-solid fa-circle-check"></i> Compliant semantic HTML5 structures</li>
-                            </ul>
-                        </div>
-                        <div class="panel-graphic">
-                            <div class="graphic-box color-purple-glow">
-                                <i class="fa-solid fa-terminal"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Panel 3: Ops -->
-                <div class="tab-panel" id="ops-panel">
-                    <div class="panel-grid">
-                        <div class="panel-info">
-                            <h3>Performance Operations</h3>
-                            <p>We ensure fast load speeds, secure setups, and smooth server reloads. We configure stat reload modules, optimize resource weights, and align security controls.</p>
-                            <ul class="panel-list">
-                                <li><i class="fa-solid fa-circle-check"></i> Blazing-fast page loading speeds</li>
-                                <li><i class="fa-solid fa-circle-check"></i> Secure CSRF protection & routing checks</li>
-                                <li><i class="fa-solid fa-circle-check"></i> Lightweight custom asset organization</li>
-                            </ul>
-                        </div>
-                        <div class="panel-graphic">
-                            <div class="graphic-box color-blue-glow">
-                                <i class="fa-solid fa-cloud-arrow-up"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Specializations</span>
+      <h2 class="section-title">Our Workflows & Focus</h2>
+      <p class="section-subtitle">
+        Click through the tabs below to explore the detailed technologies and
+        processes we deploy.
+      </p>
     </div>
+
+    <div class="tabs-container">
+      <div class="tabs-buttons-bar">
+        <button class="tab-btn active" data-tab="design" id="tab-design-btn">
+          <i class="fa-solid fa-compass-drafting"></i> Design Phase
+        </button>
+        <button class="tab-btn" data-tab="dev" id="tab-dev-btn">
+          <i class="fa-solid fa-laptop-code"></i> Development
+        </button>
+        <button class="tab-btn" data-tab="ops" id="tab-ops-btn">
+          <i class="fa-solid fa-server"></i> Deployment & Ops
+        </button>
+      </div>
+
+      <div class="tabs-content-panels">
+        <!-- Panel 1: Design -->
+        <div class="tab-panel active" id="design-panel">
+          <div class="panel-grid">
+            <div class="panel-info">
+              <h3>Aesthetic Engineering</h3>
+              <p>
+                We believe first impressions are crucial. During our design
+                cycle, we curate custom color palettes, configure high-contrast
+                layouts, specify responsive grids, and design
+                micro-interactions.
+              </p>
+              <ul class="panel-list">
+                <li>
+                  <i class="fa-solid fa-circle-check"></i> Custom color mapping
+                  (HSL Variable Design Systems)
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i> High-quality font
+                  typography scaling
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i> Interactive hover
+                  state triggers & micro-animations
+                </li>
+              </ul>
+            </div>
+            <div class="panel-graphic">
+              <div class="graphic-box color-pink-glow">
+                <i class="fa-solid fa-palette"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 2: Dev -->
+        <div class="tab-panel" id="dev-panel">
+          <div class="panel-grid">
+            <div class="panel-info">
+              <h3>Robust Architecture</h3>
+              <p>
+                Beautiful design means nothing without a fast, secure backend.
+                We craft Python solutions featuring Django's MVC layout, sqlite3
+                database systems, and dynamic routing directories.
+              </p>
+              <ul class="panel-list">
+                <li>
+                  <i class="fa-solid fa-circle-check"></i> Clean Django MVC
+                  structure (Views, URLs, Models)
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i> Lightweight vanilla
+                  JavaScript scripts
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i> Compliant semantic
+                  HTML5 structures
+                </li>
+              </ul>
+            </div>
+            <div class="panel-graphic">
+              <div class="graphic-box color-purple-glow">
+                <i class="fa-solid fa-terminal"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 3: Ops -->
+        <div class="tab-panel" id="ops-panel">
+          <div class="panel-grid">
+            <div class="panel-info">
+              <h3>Performance Operations</h3>
+              <p>
+                We ensure fast load speeds, secure setups, and smooth server
+                reloads. We configure stat reload modules, optimize resource
+                weights, and align security controls.
+              </p>
+              <ul class="panel-list">
+                <li>
+                  <i class="fa-solid fa-circle-check"></i> Blazing-fast page
+                  loading speeds
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i> Secure CSRF
+                  protection & routing checks
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i> Lightweight custom
+                  asset organization
+                </li>
+              </ul>
+            </div>
+            <div class="panel-graphic">
+              <div class="graphic-box color-blue-glow">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Values Section -->
